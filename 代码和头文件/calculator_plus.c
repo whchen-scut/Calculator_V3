@@ -94,7 +94,7 @@ void inputString(char s[])	// 输入运算表达式
     {
         if((s[i] < '0'||s[i] > '9')&&(s[i] != '+'&&s[i] != '-'&&s[i] != '*'&&s[i] != '/'&&s[i] != '.'&&s[i]!= '('&&s[i] != ')'))
         {
-            printf("错误：输入错误！\n请输入算术表达式：");
+            printf("错误：输入错误！\n\n请输入算术表达式：");
             scanf("%s", s);
             i = 0;
         }else
@@ -150,7 +150,7 @@ Status checkString(char s[])  //检查字符串的输入
                 }
                 else if((c == '+'||c == '-')&&(a[k] == '*'||a[k] == '/'))
                 {
-                    printf("错误：输入错误！\n请输入算术表达式：");
+                    printf("错误：输入错误！\n\n请输入算术表达式：");
                     inputString(s);
                 }
             }
@@ -168,7 +168,7 @@ Status checkString(char s[])  //检查字符串的输入
     }
     if(s[i-1] == '+'||s[i-1] == '-'||s[i-1] == '*'||s[i-1] == '/'||bracket != 0)
     {
-        printf("错误：输入错误！\n请输入算术表达式：");
+        printf("错误：输入错误！\n\n请输入算术表达式：");
         inputString(s);
     }
     return SUCCESS;
